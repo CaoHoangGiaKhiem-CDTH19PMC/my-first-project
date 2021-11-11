@@ -1,0 +1,32 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@*@{
+    List<Account> lstAccounts = ViewBag.LstAccounts;
+}*@
+
+@model IEnumerable<Account>
+
+<table class="table table-light text-center">
+    <thead class="table-dark">
+        <tr>
+            <th>ID</th>
+            <th>Tên Đăng Nhập</th>
+            <th>Mật Khẩu</th>
+            <th>Số Điện Thoại</th>
+            <th>Địa Chỉ</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Account a  in Model)
+        {
+        <tr>
+            <th>@a.Id</th>
+            <th>@a.Username</th>
+            <th>@a.Password</th>
+            <th>@a.Phone</th>
+            <th>@a.Address</th>
+        </tr>
+        }
+    </tbody>
+</table>
